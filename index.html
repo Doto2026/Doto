@@ -646,7 +646,33 @@ document.querySelectorAll('input[name="awareness"]').forEach(input => {
   });
 });
 
-function submitForm() {
+async function submitForm() {
+  const data = {
+    cao_nome:      document.getElementById('f-nome-cao').value,
+    cao_raca:      document.getElementById('f-raca').value,
+    cao_idade:     document.getElementById('f-idade').value,
+    cao_saude:     [...document.querySelectorAll('input[name="saude"]:checked')].map(i => i.value).join(', '),
+    rotina_servicos:   [...document.querySelectorAll('input[name="servicos"]:checked')].map(i => i.value).join(', '),
+    rotina_frequencia: document.querySelector('input[name="frequencia"]:checked')?.value || '',
+    rotina_incomoda:   document.getElementById('f-incomoda').value,
+    prioridades:       [...document.querySelectorAll('input[name="prioridade"]:checked')].map(i => i.value).join(', '),
+    ala_senior:        document.querySelector('input[name="ala-senior"]:checked')?.value || '',
+    desejo:            document.getElementById('f-queria').value,
+    tutor_nome:        document.getElementById('f-nome-tutor').value,
+    tutor_bairro:      document.getElementById('f-bairro').value,
+    tutor_condominio:  document.querySelector('input[name="condominio"]:checked')?.value || '',
+    tutor_contato:     [...document.querySelectorAll('input[name="awareness"]:checked')].map(i => i.value).join(', '),
+    tutor_whatsapp:    document.getElementById('f-wpp').value
+  };
+
+  try {
+    await fetch('https://formspree.io/f/xeenynnr', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  } catch(e) {}
+
   document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
   document.getElementById('step-progress').style.display = 'none';
   document.querySelector('.step-labels').style.display = 'none';
@@ -656,7 +682,12 @@ function submitForm() {
 
 function handleSignup() {
   const wpp = document.getElementById('f-wpp').value;
-  if (wpp) console.log('Dotô · Cadastro:', wpp);
+  if (!wpp) return;
+  fetch('https://formspree.io/f/xeenynnr', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ tipo: 'cadastro_lista', whatsapp: wpp })
+  });
 }
 
 const observer = new IntersectionObserver((entries) => {
