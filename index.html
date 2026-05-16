@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -44,145 +43,144 @@ a { color: inherit; text-decoration: none; }
 
 /* NAV */
 nav {
-position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-padding: 16px 32px;
-display: flex; align-items: center;
-transition: background 0.3s, box-shadow 0.3s;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 16px 32px;
+  display: flex; align-items: center;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 nav.scrolled {
-background: rgba(247,245,240,0.95);
-backdrop-filter: blur(12px);
-box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  background: rgba(247,245,240,0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.06);
 }
 .nav-brand { display: flex; align-items: center; gap: 12px; }
 .nav-logo-img {
-height: 48px; width: 48px;
-border-radius: 50%; object-fit: cover;
-box-shadow: 0 2px 12px rgba(30,66,53,0.18);
-flex-shrink: 0;
+  height: 48px; width: 48px;
+  border-radius: 50%; object-fit: cover;
+  box-shadow: 0 2px 12px rgba(30,66,53,0.18);
+  flex-shrink: 0;
 }
 .nav-brand-text { display: flex; flex-direction: column; line-height: 1.15; }
-.nav-brand-name { font-family: ‘Cormorant Garamond’, serif; font-size: 22px; font-weight: 600; color: var(–green-deep); letter-spacing: -0.3px; }
-.nav-brand-sub { font-size: 10px; font-weight: 400; color: var(–slate); letter-spacing: 2px; text-transform: uppercase; }
+.nav-brand-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--green-deep); letter-spacing: -0.3px; }
+.nav-brand-sub { font-size: 10px; font-weight: 400; color: var(--slate); letter-spacing: 2px; text-transform: uppercase; }
 
 /* HERO */
 .hero {
-min-height: 100vh; display: flex; align-items: center;
-position: relative; overflow: hidden; padding: 120px 0 80px;
+  min-height: 100vh; display: flex; align-items: center;
+  position: relative; overflow: hidden; padding: 120px 0 80px;
 }
 .hero::before {
-content: ‘’;
-position: absolute; top: -10%; right: -15%;
-width: 65vw; height: 65vw; max-width: 700px; max-height: 700px;
-background: radial-gradient(ellipse at 60% 40%, rgba(45,90,74,0.10) 0%, rgba(212,165,116,0.06) 50%, transparent 75%);
-border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
-pointer-events: none;
+  content: '';
+  position: absolute; top: -10%; right: -15%;
+  width: 65vw; height: 65vw; max-width: 700px; max-height: 700px;
+  background: radial-gradient(ellipse at 60% 40%, rgba(45,90,74,0.10) 0%, rgba(212,165,116,0.06) 50%, transparent 75%);
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  pointer-events: none;
 }
 .hero-inner {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 80px;
-align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 }
 /* Logo esquerda, texto direita */
 .hero-visual { display: flex; justify-content: center; align-items: center; }
 .hero-logo-img {
-width: 100%; max-width: 360px; height: auto; aspect-ratio: 1;
-border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;
-box-shadow: 0 20px 60px rgba(30,66,53,0.2), 0 4px 16px rgba(30,66,53,0.1);
+  width: 100%; max-width: 360px; height: auto; aspect-ratio: 1;
+  border-radius: 50%; object-fit: cover; display: block; margin: 0 auto;
+  box-shadow: 0 20px 60px rgba(30,66,53,0.2), 0 4px 16px rgba(30,66,53,0.1);
 }
 .hero-content { display: flex; flex-direction: column; }
 .hero-badge {
-display: inline-flex; align-items: center; gap: 8px;
-background: rgba(45,90,74,0.08); border: 1px solid rgba(45,90,74,0.15);
-padding: 7px 16px; border-radius: 100px; margin-bottom: 28px;
-width: fit-content;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(45,90,74,0.08); border: 1px solid rgba(45,90,74,0.15);
+  padding: 7px 16px; border-radius: 100px; margin-bottom: 28px;
+  width: fit-content;
 }
 .hero-badge-dot {
-width: 6px; height: 6px; background: var(–terra);
-border-radius: 50%; animation: pulse 2s ease-in-out infinite;
+  width: 6px; height: 6px; background: var(--terra);
+  border-radius: 50%; animation: pulse 2s ease-in-out infinite;
 }
 @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(0.7); } }
-.hero-badge span { font-size: 12px; font-weight: 500; color: var(–green); letter-spacing: 0.5px; }
-.hero-title { font-size: clamp(38px, 5vw, 68px); margin-bottom: 20px; color: var(–green-deep); }
-.hero-subtitle { font-size: 17px; color: var(–ink-light); font-weight: 300; margin-bottom: 40px; line-height: 1.75; }
+.hero-badge span { font-size: 12px; font-weight: 500; color: var(--green); letter-spacing: 0.5px; }
+.hero-title { font-size: clamp(38px, 5vw, 68px); margin-bottom: 20px; color: var(--green-deep); }
+.hero-subtitle { font-size: 17px; color: var(--ink-light); font-weight: 300; margin-bottom: 40px; line-height: 1.75; }
 .btn-primary {
-background: var(–green); color: white;
-padding: 15px 32px; border-radius: 100px;
-font-size: 15px; font-weight: 500;
-transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px;
-cursor: pointer; border: none; width: fit-content;
+  background: var(--green); color: white;
+  padding: 15px 32px; border-radius: 100px;
+  font-size: 15px; font-weight: 500;
+  transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px;
+  cursor: pointer; border: none; width: fit-content;
 }
-.btn-primary:hover { background: var(–green-deep); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(30,66,53,0.25); }
+.btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(30,66,53,0.25); }
 .scroll-hint {
-position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
-display: flex; flex-direction: column; align-items: center; gap: 8px;
-opacity: 0.4; animation: fadeInUp 1s ease 1s both;
+  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  opacity: 0.4; animation: fadeInUp 1s ease 1s both;
 }
 .scroll-line {
-width: 1px; height: 40px;
-background: linear-gradient(to bottom, var(–green), transparent);
-animation: scrollLine 2s ease-in-out infinite;
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--green), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
 }
 @keyframes scrollLine {
-0% { transform: scaleY(0); transform-origin: top; }
-50% { transform: scaleY(1); transform-origin: top; }
-51% { transform-origin: bottom; }
-100% { transform: scaleY(0); transform-origin: bottom; }
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
 }
 @keyframes fadeInUp {
-from { opacity: 0; transform: translateX(-50%) translateY(12px); }
-to { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+  from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+  to { opacity: 0.4; transform: translateX(-50%) translateY(0); }
 }
-
 /* FORM */
 #pesquisa { padding: 80px 0 100px; }
 .form-section-header { text-align: center; margin-bottom: 56px; }
-.form-section-title { font-size: clamp(32px,4vw,48px); color: var(–green-deep); margin-bottom: 16px; font-family: ‘Cormorant Garamond’, serif; font-weight: 600; }
-.form-section-sub { font-size: 17px; color: var(–ink-light); font-weight: 300; max-width: 480px; margin: 0 auto; }
+.form-section-title { font-size: clamp(32px,4vw,48px); color: var(--green-deep); margin-bottom: 16px; font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+.form-section-sub { font-size: 17px; color: var(--ink-light); font-weight: 300; max-width: 480px; margin: 0 auto; }
 .step-progress { display: flex; align-items: center; justify-content: center; margin-bottom: 48px; }
 .step-dot {
-width: 36px; height: 36px; border-radius: 50%;
-display: flex; align-items: center; justify-content: center;
-font-size: 13px; font-weight: 500;
-border: 1.5px solid var(–cream-mid); background: var(–cream); color: var(–slate);
-transition: all 0.35s; position: relative; z-index: 1;
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 500;
+  border: 1.5px solid var(--cream-mid); background: var(--cream); color: var(--slate);
+  transition: all 0.35s; position: relative; z-index: 1;
 }
-.step-dot.active { border-color: var(–green); background: var(–green); color: white; }
-.step-dot.done { border-color: var(–green); background: rgba(45,90,74,0.08); color: var(–green); }
-.step-line { width: 60px; height: 1.5px; background: var(–cream-mid); transition: background 0.35s; }
-.step-line.done { background: var(–green); }
+.step-dot.active { border-color: var(--green); background: var(--green); color: white; }
+.step-dot.done { border-color: var(--green); background: rgba(45,90,74,0.08); color: var(--green); }
+.step-line { width: 60px; height: 1.5px; background: var(--cream-mid); transition: background 0.35s; }
+.step-line.done { background: var(--green); }
 .step-labels { display: flex; justify-content: space-between; margin-bottom: 40px; }
-.step-label-item { font-size: 11px; color: var(–slate); text-align: center; flex: 1; opacity: 0.5; }
-.step-label-item.active { color: var(–green); opacity: 1; font-weight: 500; }
+.step-label-item { font-size: 11px; color: var(--slate); text-align: center; flex: 1; opacity: 0.5; }
+.step-label-item.active { color: var(--green); opacity: 1; font-weight: 500; }
 .step-label-item.done { opacity: 0.7; }
 .form-card {
-background: white; border-radius: var(–r-xl);
-padding: 48px; box-shadow: var(–shadow-lg);
-position: relative; overflow: hidden;
+  background: white; border-radius: var(--r-xl);
+  padding: 48px; box-shadow: var(--shadow-lg);
+  position: relative; overflow: hidden;
 }
 .form-card::before {
-content: ‘’; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-background: linear-gradient(to right, var(–green), var(–gold));
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(to right, var(--green), var(--gold));
 }
 .step-panel { display: none; animation: fadeStep 0.4s ease; }
 .step-panel.active { display: block; }
 @keyframes fadeStep { from { opacity:0; transform:translateX(16px); } to { opacity:1; transform:translateX(0); } }
-.step-icon { width: 48px; height: 48px; background: rgba(45,90,74,0.08); border-radius: var(–r-sm); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
-.step-title { font-size: 26px; color: var(–green-deep); margin-bottom: 6px; font-family: ‘Cormorant Garamond’, serif; font-weight: 600; }
-.step-desc { font-size: 15px; color: var(–ink-light); font-weight: 300; margin-bottom: 36px; }
+.step-icon { width: 48px; height: 48px; background: rgba(45,90,74,0.08); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+.step-title { font-size: 26px; color: var(--green-deep); margin-bottom: 6px; font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+.step-desc { font-size: 15px; color: var(--ink-light); font-weight: 300; margin-bottom: 36px; }
 .field-group { margin-bottom: 24px; }
-.field-group label { display: block; font-size: 14px; font-weight: 500; color: var(–ink); margin-bottom: 8px; }
-.field-group label span { color: var(–slate); font-weight: 300; font-size: 13px; margin-left: 4px; }
+.field-group label { display: block; font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+.field-group label span { color: var(--slate); font-weight: 300; font-size: 13px; margin-left: 4px; }
 .field-input, .field-textarea {
-width: 100%; padding: 13px 16px;
-border: 1.5px solid var(–cream-mid); border-radius: var(–r-sm);
-font-family: ‘DM Sans’, sans-serif; font-size: 15px; font-weight: 300;
-color: var(–ink); background: var(–cream); outline: none;
-transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none;
+  width: 100%; padding: 13px 16px;
+  border: 1.5px solid var(--cream-mid); border-radius: var(--r-sm);
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 300;
+  color: var(--ink); background: var(--cream); outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none;
 }
 .field-input:focus, .field-textarea:focus {
-border-color: var(–green); box-shadow: 0 0 0 3px rgba(45,90,74,0.08); background: white;
+  border-color: var(--green); box-shadow: 0 0 0 3px rgba(45,90,74,0.08); background: white;
 }
 .field-input::placeholder, .field-textarea::placeholder { color: #bbb; }
 .field-textarea { resize: vertical; min-height: 90px; }
@@ -190,88 +188,89 @@ border-color: var(–green); box-shadow: 0 0 0 3px rgba(45,90,74,0.08); backgrou
 .pill-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
 .pill-group input { display: none; }
 .pill-group label {
-display: inline-flex; align-items: center; gap: 6px;
-padding: 9px 18px; border-radius: 100px;
-border: 1.5px solid var(–cream-mid); background: var(–cream);
-font-size: 14px; font-weight: 400; color: var(–ink-light);
-cursor: pointer; transition: all 0.2s; user-select: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 18px; border-radius: 100px;
+  border: 1.5px solid var(--cream-mid); background: var(--cream);
+  font-size: 14px; font-weight: 400; color: var(--ink-light);
+  cursor: pointer; transition: all 0.2s; user-select: none;
 }
-.pill-group input:checked + label { border-color: var(–green); background: rgba(45,90,74,0.08); color: var(–green); font-weight: 500; }
-.pill-group label:hover { border-color: rgba(45,90,74,0.4); color: var(–green); }
-.form-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(–cream-mid); }
-.btn-back { color: var(–slate); font-size: 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; background: none; border: none; font-family: ‘DM Sans’, sans-serif; transition: color 0.2s; }
-.btn-back:hover { color: var(–green); }
-.btn-next { background: var(–green); color: white; padding: 13px 32px; border-radius: 100px; font-size: 15px; font-weight: 500; font-family: ‘DM Sans’, sans-serif; cursor: pointer; border: none; display: flex; align-items: center; gap: 8px; transition: all 0.25s; }
-.btn-next:hover { background: var(–green-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,66,53,0.25); }
-.btn-next.submit { background: var(–gold); color: var(–green-deep); }
+.pill-group input:checked + label { border-color: var(--green); background: rgba(45,90,74,0.08); color: var(--green); font-weight: 500; }
+.pill-group label:hover { border-color: rgba(45,90,74,0.4); color: var(--green); }
+.form-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--cream-mid); }
+.btn-back { color: var(--slate); font-size: 14px; display: flex; align-items: center; gap: 6px; cursor: pointer; background: none; border: none; font-family: 'DM Sans', sans-serif; transition: color 0.2s; }
+.btn-back:hover { color: var(--green); }
+.btn-next { background: var(--green); color: white; padding: 13px 32px; border-radius: 100px; font-size: 15px; font-weight: 500; font-family: 'DM Sans', sans-serif; cursor: pointer; border: none; display: flex; align-items: center; gap: 8px; transition: all 0.25s; }
+.btn-next:hover { background: var(--green-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,66,53,0.25); }
+.btn-next.submit { background: var(--gold); color: var(--green-deep); }
 .btn-next.submit:hover { background: #c9975f; }
-.signup-block { margin-top: 32px; padding: 28px; background: rgba(45,90,74,0.04); border-radius: var(–r-md); border: 1.5px solid rgba(45,90,74,0.1); }
-.signup-block h4 { font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 600; color: var(–green-deep); margin-bottom: 6px; }
-.signup-block p { font-size: 13.5px; color: var(–ink-light); font-weight: 300; margin-bottom: 16px; line-height: 1.6; }
+.signup-block { margin-top: 32px; padding: 28px; background: rgba(45,90,74,0.04); border-radius: var(--r-md); border: 1.5px solid rgba(45,90,74,0.1); }
+.signup-block h4 { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: var(--green-deep); margin-bottom: 6px; }
+.signup-block p { font-size: 13.5px; color: var(--ink-light); font-weight: 300; margin-bottom: 16px; line-height: 1.6; }
 .signup-row { display: flex; gap: 12px; }
 .signup-row .field-input { flex: 1; }
-.btn-signup { background: var(–green); color: white; padding: 13px 24px; border-radius: var(–r-sm); font-size: 14px; font-weight: 500; font-family: ‘DM Sans’, sans-serif; border: none; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
-.btn-signup:hover { background: var(–green-deep); }
+.btn-signup { background: var(--green); color: white; padding: 13px 24px; border-radius: var(--r-sm); font-size: 14px; font-weight: 500; font-family: 'DM Sans', sans-serif; border: none; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+.btn-signup:hover { background: var(--green-deep); }
 .form-success { display: none; text-align: center; padding: 20px 0; animation: fadeStep 0.5s ease; }
 .form-success .success-icon { width: 72px; height: 72px; background: rgba(45,90,74,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 24px; }
-.form-success h3 { font-family: ‘Cormorant Garamond’, serif; font-size: 32px; font-weight: 600; color: var(–green-deep); margin-bottom: 12px; }
-.form-success p { font-size: 16px; color: var(–ink-light); font-weight: 300; max-width: 360px; margin: 0 auto; line-height: 1.7; }
+.form-success h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 600; color: var(--green-deep); margin-bottom: 12px; }
+.form-success p { font-size: 16px; color: var(--ink-light); font-weight: 300; max-width: 360px; margin: 0 auto; line-height: 1.7; }
 
 /* DIVIDER */
 .section-divider { padding: 60px 0; text-align: center; }
-.divider-line { width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, var(–green), transparent); margin: 0 auto 32px; }
-.divider-text { font-family: ‘Cormorant Garamond’, serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(–green); margin-bottom: 8px; }
-.divider-sub { font-size: 13px; color: var(–slate); letter-spacing: 0.5px; }
+.divider-line { width: 1px; height: 60px; background: linear-gradient(to bottom, transparent, var(--green), transparent); margin: 0 auto 32px; }
+.divider-text { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; font-style: italic; color: var(--green); margin-bottom: 8px; }
+.divider-sub { font-size: 13px; color: var(--slate); letter-spacing: 0.5px; }
 
 /* MANIFESTO */
-.manifesto-section { background: var(–green-deep); padding: 100px 0; position: relative; overflow: hidden; }
-.manifesto-section::before { content: ‘’; position: absolute; top: -30%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(212,165,116,0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
+.manifesto-section { background: var(--green-deep); padding: 100px 0; position: relative; overflow: hidden; }
+.manifesto-section::before { content: ''; position: absolute; top: -30%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(212,165,116,0.08) 0%, transparent 70%); border-radius: 50%; pointer-events: none; }
 .manifesto-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; padding: 0 24px; }
-.manifesto-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(–gold); margin-bottom: 40px; display: block; opacity: 0.8; }
-.manifesto-text { font-family: ‘Cormorant Garamond’, serif; font-size: clamp(22px,3vw,30px); font-weight: 300; line-height: 1.65; color: rgba(255,255,255,0.9); }
-.manifesto-text em { font-style: italic; color: var(–gold); }
+.manifesto-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 40px; display: block; opacity: 0.8; }
+.manifesto-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px,3vw,30px); font-weight: 300; line-height: 1.65; color: rgba(255,255,255,0.9); }
+.manifesto-text em { font-style: italic; color: var(--gold); }
 .manifesto-text strong { font-weight: 600; color: white; }
-.manifesto-closing { margin-top: 48px; padding-top: 40px; border-top: 1px solid rgba(212,165,116,0.2); font-family: ‘Cormorant Garamond’, serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(–gold); opacity: 0.9; }
+.manifesto-closing { margin-top: 48px; padding-top: 40px; border-top: 1px solid rgba(212,165,116,0.2); font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--gold); opacity: 0.9; }
 
 /* FOOTER */
-footer { background: var(–green-deep); padding: 56px 0 36px; color: white; }
+footer { background: var(--green-deep); padding: 56px 0 36px; color: white; }
 .footer-simple { display: flex; align-items: center; gap: 32px; margin-bottom: 40px; }
 
-.footer-slogan { font-size: 16px; color: rgba(255,255,255,0.7); font-style: italic; font-family: ‘Cormorant Garamond’, serif; font-weight: 300; margin-bottom: 8px; }
+.footer-slogan { font-size: 16px; color: rgba(255,255,255,0.7); font-style: italic; font-family: 'Cormorant Garamond', serif; font-weight: 300; margin-bottom: 8px; }
 .footer-address { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; }
 .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); font-weight: 300; }
 
+
 /* OHANA */
 .ohana-section {
-padding: 80px 0 100px;
-background: var(–cream);
+  padding: 80px 0 100px;
+  background: var(--cream);
 }
 .ohana-inner {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 32px;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
 }
 .ohana-img {
-width: 320px;
-height: 320px;
-border-radius: 50%;
-object-fit: cover;
-box-shadow: 0 20px 60px rgba(30,66,53,0.12), 0 4px 16px rgba(30,66,53,0.08);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(30,66,53,0.12), 0 4px 16px rgba(30,66,53,0.08);
 }
 .ohana-frase {
-font-family: ‘Cormorant Garamond’, serif;
-font-size: clamp(22px, 3vw, 32px);
-font-weight: 300;
-font-style: italic;
-color: var(–green-deep);
-line-height: 1.5;
-max-width: 480px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--green-deep);
+  line-height: 1.5;
+  max-width: 480px;
 }
 @media (max-width: 640px) {
-.ohana-img { width: 240px; height: 240px; }
+  .ohana-img { width: 240px; height: 240px; }
 }
 
 /* REVEAL */
@@ -283,18 +282,17 @@ max-width: 480px;
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-.hero-inner { grid-template-columns: 1fr; gap: 48px; }
-.hero-logo-img { max-width: 260px; }
-.footer-simple { flex-direction: column; text-align: center; gap: 20px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-logo-img { max-width: 260px; }
+  .footer-simple { flex-direction: column; text-align: center; gap: 20px; }
 }
 @media (max-width: 640px) {
-.form-card { padding: 32px 24px; }
-.field-row { grid-template-columns: 1fr; }
-.signup-row { flex-direction: column; }
-.step-labels { display: none; }
+  .form-card { padding: 32px 24px; }
+  .field-row { grid-template-columns: 1fr; }
+  .signup-row { flex-direction: column; }
+  .step-labels { display: none; }
 }
 </style>
-
 </head>
 <body>
 
@@ -309,44 +307,39 @@ max-width: 480px;
 </nav>
 
 <!-- HERO: logo esquerda, texto direita -->
-
 <section class="hero">
   <div class="container-wide">
     <div class="hero-inner">
 
-```
-  <div class="hero-visual">
-    <img src="IMG_5505.jpeg" alt="Dotô Escolinha Canina" class="hero-logo-img">
-  </div>
+      <div class="hero-visual">
+        <img src="IMG_5505.jpeg" alt="Dotô Escolinha Canina" class="hero-logo-img">
+      </div>
 
-  <div class="hero-content">
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      <span>Pré-lançamento · Lapa · SP</span>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <span>Pré-lançamento · Lapa · SP</span>
+        </div>
+        <h1 class="t-display hero-title">
+          Queremos construir<br>esse sonho <em>com você.</em>
+        </h1>
+        <p class="hero-subtitle">
+          O Dotô ainda está nascendo — e antes de abrir as portas, queremos ouvir os tutores que vão fazer parte dessa história.
+        </p>
+        <div>
+          <a href="#pesquisa" class="btn-primary">
+            Participar da pesquisa
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
-    <h1 class="t-display hero-title">
-      Queremos construir<br>esse sonho <em>com você.</em>
-    </h1>
-    <p class="hero-subtitle">
-      O Dotô ainda está nascendo — e antes de abrir as portas, queremos ouvir os tutores que vão fazer parte dessa história.
-    </p>
-    <div>
-      <a href="#pesquisa" class="btn-primary">
-        Participar da pesquisa
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-      </a>
-    </div>
-  </div>
-
-</div>
-```
-
   </div>
   <div class="scroll-hint"><div class="scroll-line"></div></div>
 </section>
 
 <!-- FORMULÁRIO -->
-
 <section id="pesquisa">
   <div class="container">
     <div class="form-section-header">
@@ -354,186 +347,181 @@ max-width: 480px;
       <p class="form-section-sub">Conte-nos sobre o seu cão e o que espera de um lugar verdadeiramente diferente. Menos de 5 minutos.</p>
     </div>
 
-```
-<div class="step-progress" id="step-progress">
-  <div class="step-dot active" id="dot-1">1</div>
-  <div class="step-line" id="line-1"></div>
-  <div class="step-dot" id="dot-2">2</div>
-  <div class="step-line" id="line-2"></div>
-  <div class="step-dot" id="dot-3">3</div>
-  <div class="step-line" id="line-3"></div>
-  <div class="step-dot" id="dot-4">4</div>
-</div>
+    <div class="step-progress" id="step-progress">
+      <div class="step-dot active" id="dot-1">1</div>
+      <div class="step-line" id="line-1"></div>
+      <div class="step-dot" id="dot-2">2</div>
+      <div class="step-line" id="line-2"></div>
+      <div class="step-dot" id="dot-3">3</div>
+      <div class="step-line" id="line-3"></div>
+      <div class="step-dot" id="dot-4">4</div>
+    </div>
 
-<div class="step-labels">
-  <div class="step-label-item active" id="lbl-1">Sobre o cão</div>
-  <div class="step-label-item" id="lbl-2">Rotina atual</div>
-  <div class="step-label-item" id="lbl-3">O que você quer</div>
-  <div class="step-label-item" id="lbl-4">Sobre você</div>
-</div>
+    <div class="step-labels">
+      <div class="step-label-item active" id="lbl-1">Sobre o cão</div>
+      <div class="step-label-item" id="lbl-2">Rotina atual</div>
+      <div class="step-label-item" id="lbl-3">O que você quer</div>
+      <div class="step-label-item" id="lbl-4">Sobre você</div>
+    </div>
+ <div class="form-card">
 
-<div class="form-card">
+      <div class="step-panel active" id="step-1">
+        <div class="step-icon">🐶</div>
+        <h3 class="t-headline step-title">Sobre o seu cão</h3>
+        <p class="step-desc">Queremos conhecer quem vai ser o verdadeiro cliente do Dotô.</p>
+        <div class="field-group">
+          <label>Qual é o nome do seu cão?</label>
+          <input class="field-input" type="text" placeholder="Ex: Bidu, Luna, Pretinha…" id="f-nome-cao">
+        </div>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Raça <span>(ou estimado)</span></label>
+            <input class="field-input" type="text" placeholder="Ex: Shih Tzu, Poodle…" id="f-raca">
+          </div>
+          <div class="field-group">
+            <label>Quantos anos tem?</label>
+            <input class="field-input" type="number" placeholder="Ex: 3" min="0" max="25" id="f-idade">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Ele(a) tem alguma condição de saúde que você acompanha?</label>
+          <div class="pill-group">
+            <input type="checkbox" id="s-saudavel" name="saude" value="saudavel"><label for="s-saudavel">Saudável 💚</label>
+            <input type="checkbox" id="s-artrose" name="saude" value="artrose"><label for="s-artrose">Artrose / mobilidade</label>
+            <input type="checkbox" id="s-coracao" name="saude" value="coracao"><label for="s-coracao">Cardíaco</label>
+            <input type="checkbox" id="s-renal" name="saude" value="renal"><label for="s-renal">Renal</label>
+            <input type="checkbox" id="s-cognitivo" name="saude" value="cognitivo"><label for="s-cognitivo">Cognitivo / demência</label>
+            <input type="checkbox" id="s-outro" name="saude" value="outro"><label for="s-outro">Outro</label>
+          </div>
+        </div>
+        <div class="form-nav">
+          <span></span>
+          <button class="btn-next" onclick="goStep(2)">Próximo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
 
-  <div class="step-panel active" id="step-1">
-    <div class="step-icon">🐶</div>
-    <h3 class="t-headline step-title">Sobre o seu cão</h3>
-    <p class="step-desc">Queremos conhecer quem vai ser o verdadeiro cliente do Dotô.</p>
-    <div class="field-group">
-      <label>Qual é o nome do seu cão?</label>
-      <input class="field-input" type="text" placeholder="Ex: Bidu, Luna, Pretinha…" id="f-nome-cao">
-    </div>
-    <div class="field-row">
-      <div class="field-group">
-        <label>Raça <span>(ou estimado)</span></label>
-        <input class="field-input" type="text" placeholder="Ex: Shih Tzu, Poodle…" id="f-raca">
+      <div class="step-panel" id="step-2">
+        <div class="step-icon">📅</div>
+        <h3 class="t-headline step-title">A rotina de hoje</h3>
+        <p class="step-desc">Conta como é a vida do seu cão agora — sem julgamento nenhum.</p>
+        <div class="field-group">
+          <label>Quais serviços você usa atualmente?</label>
+          <div class="pill-group">
+            <input type="checkbox" id="sv-nenhum" name="servicos" value="nenhum"><label for="sv-nenhum">Nenhum ainda</label>
+            <input type="checkbox" id="sv-banho" name="servicos" value="banho"><label for="sv-banho">Banho e tosa</label>
+            <input type="checkbox" id="sv-creche" name="servicos" value="creche"><label for="sv-creche">Creche / daycare</label>
+            <input type="checkbox" id="sv-hotel" name="servicos" value="hotel"><label for="sv-hotel">Hotel / hospedagem</label>
+            <input type="checkbox" id="sv-adest" name="servicos" value="adestramento"><label for="sv-adest">Adestramento</label>
+            <input type="checkbox" id="sv-fisio" name="servicos" value="fisioterapia"><label for="sv-fisio">Fisioterapia</label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>O que mais te incomoda no que está disponível hoje? <span>(opcional)</span></label>
+          <textarea class="field-textarea" placeholder="Ex: não confio em deixar ele em qualquer lugar, não tem serviço geriátrico perto…" id="f-incomoda"></textarea>
+        </div>
+        <div class="field-group">
+          <label>Com que frequência seu cão precisaria de cuidados fora de casa?</label>
+          <div class="pill-group">
+            <input type="radio" id="fr-dia" name="frequencia" value="diario"><label for="fr-dia">Todo dia</label>
+            <input type="radio" id="fr-sem" name="frequencia" value="semana"><label for="fr-sem">Algumas vezes por semana</label>
+            <input type="radio" id="fr-oca" name="frequencia" value="ocasional"><label for="fr-oca">Ocasionalmente</label>
+            <input type="radio" id="fr-via" name="frequencia" value="viagem"><label for="fr-via">Só em viagens</label>
+          </div>
+        </div>
+        <div class="form-nav">
+          <button class="btn-back" onclick="goStep(1)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</button>
+          <button class="btn-next" onclick="goStep(3)">Próximo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
       </div>
-      <div class="field-group">
-        <label>Quantos anos tem?</label>
-        <input class="field-input" type="number" placeholder="Ex: 3" min="0" max="25" id="f-idade">
-      </div>
-    </div>
-    <div class="field-group">
-      <label>Ele(a) tem alguma condição de saúde que você acompanha?</label>
-      <div class="pill-group">
-        <input type="checkbox" id="s-saudavel" name="saude" value="saudavel"><label for="s-saudavel">Saudável 💚</label>
-        <input type="checkbox" id="s-artrose" name="saude" value="artrose"><label for="s-artrose">Artrose / mobilidade</label>
-        <input type="checkbox" id="s-coracao" name="saude" value="coracao"><label for="s-coracao">Cardíaco</label>
-        <input type="checkbox" id="s-renal" name="saude" value="renal"><label for="s-renal">Renal</label>
-        <input type="checkbox" id="s-cognitivo" name="saude" value="cognitivo"><label for="s-cognitivo">Cognitivo / demência</label>
-        <input type="checkbox" id="s-outro" name="saude" value="outro"><label for="s-outro">Outro</label>
-      </div>
-    </div>
-    <div class="form-nav">
-      <span></span>
-      <button class="btn-next" onclick="goStep(2)">Próximo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-    </div>
-  </div>
 
-  <div class="step-panel" id="step-2">
-    <div class="step-icon">📅</div>
-    <h3 class="t-headline step-title">A rotina de hoje</h3>
-    <p class="step-desc">Conta como é a vida do seu cão agora — sem julgamento nenhum.</p>
-    <div class="field-group">
-      <label>Quais serviços você usa atualmente?</label>
-      <div class="pill-group">
-        <input type="checkbox" id="sv-nenhum" name="servicos" value="nenhum"><label for="sv-nenhum">Nenhum ainda</label>
-        <input type="checkbox" id="sv-banho" name="servicos" value="banho"><label for="sv-banho">Banho e tosa</label>
-        <input type="checkbox" id="sv-creche" name="servicos" value="creche"><label for="sv-creche">Creche / daycare</label>
-        <input type="checkbox" id="sv-hotel" name="servicos" value="hotel"><label for="sv-hotel">Hotel / hospedagem</label>
-        <input type="checkbox" id="sv-adest" name="servicos" value="adestramento"><label for="sv-adest">Adestramento</label>
-        <input type="checkbox" id="sv-fisio" name="servicos" value="fisioterapia"><label for="sv-fisio">Fisioterapia</label>
+      <div class="step-panel" id="step-3">
+        <div class="step-icon">✨</div>
+        <h3 class="t-headline step-title">O que você prioriza</h3>
+        <p class="step-desc">Se o Dotô fosse o lugar ideal para o seu cão, como ele seria?</p>
+        <div class="field-group">
+          <label>O que é mais importante para você?</label>
+          <div class="pill-group">
+            <input type="checkbox" id="p-confianca" name="prioridade" value="confianca"><label for="p-confianca">Confiança e segurança</label>
+            <input type="checkbox" id="p-senior" name="prioridade" value="senior"><label for="p-senior">Cuidado geriátrico</label>
+            <input type="checkbox" id="p-equipe" name="prioridade" value="equipe"><label for="p-equipe">Equipe especializada</label>
+            <input type="checkbox" id="p-localizacao" name="prioridade" value="localizacao"><label for="p-localizacao">Perto de casa</label>
+            <input type="checkbox" id="p-acompanhar" name="prioridade" value="acompanhar"><label for="p-acompanhar">Acompanhamento em tempo real</label>
+            <input type="checkbox" id="p-metodo" name="prioridade" value="metodo"><label for="p-metodo">Metodologia positiva</label>
+            <input type="checkbox" id="p-preco" name="prioridade" value="preco"><label for="p-preco">Preço justo</label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Teria interesse em cuidado especializado para cães acima de 8 anos?</label>
+          <div class="pill-group">
+            <input type="radio" id="al-sim" name="ala-senior" value="sim"><label for="al-sim">Sim, seria muito importante</label>
+            <input type="radio" id="al-talvez" name="ala-senior" value="talvez"><label for="al-talvez">Talvez no futuro</label>
+            <input type="radio" id="al-nao" name="ala-senior" value="nao"><label for="al-nao">Não no momento</label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Tem algo que você sempre quis num serviço desses e nunca encontrou? <span>(opcional)</span></label>
+          <textarea class="field-textarea" placeholder="Pode ser qualquer coisa — estrutura, horário, atendimento, comunicação…" id="f-queria"></textarea>
+        </div>
+        <div class="form-nav">
+          <button class="btn-back" onclick="goStep(2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</button>
+          <button class="btn-next" onclick="goStep(4)">Próximo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        </div>
       </div>
-    </div>
-    <div class="field-group">
-      <label>O que mais te incomoda no que está disponível hoje? <span>(opcional)</span></label>
-      <textarea class="field-textarea" placeholder="Ex: não confio em deixar ele em qualquer lugar, não tem serviço geriátrico perto…" id="f-incomoda"></textarea>
-    </div>
-    <div class="field-group">
-      <label>Com que frequência seu cão precisaria de cuidados fora de casa?</label>
-      <div class="pill-group">
-        <input type="radio" id="fr-dia" name="frequencia" value="diario"><label for="fr-dia">Todo dia</label>
-        <input type="radio" id="fr-sem" name="frequencia" value="semana"><label for="fr-sem">Algumas vezes por semana</label>
-        <input type="radio" id="fr-oca" name="frequencia" value="ocasional"><label for="fr-oca">Ocasionalmente</label>
-        <input type="radio" id="fr-via" name="frequencia" value="viagem"><label for="fr-via">Só em viagens</label>
-      </div>
-    </div>
-    <div class="form-nav">
-      <button class="btn-back" onclick="goStep(1)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</button>
-      <button class="btn-next" onclick="goStep(3)">Próximo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-    </div>
-  </div>
 
-  <div class="step-panel" id="step-3">
-    <div class="step-icon">✨</div>
-    <h3 class="t-headline step-title">O que você prioriza</h3>
-    <p class="step-desc">Se o Dotô fosse o lugar ideal para o seu cão, como ele seria?</p>
-    <div class="field-group">
-      <label>O que é mais importante para você?</label>
-      <div class="pill-group">
-        <input type="checkbox" id="p-confianca" name="prioridade" value="confianca"><label for="p-confianca">Confiança e segurança</label>
-        <input type="checkbox" id="p-senior" name="prioridade" value="senior"><label for="p-senior">Cuidado geriátrico</label>
-        <input type="checkbox" id="p-equipe" name="prioridade" value="equipe"><label for="p-equipe">Equipe especializada</label>
-        <input type="checkbox" id="p-localizacao" name="prioridade" value="localizacao"><label for="p-localizacao">Perto de casa</label>
-        <input type="checkbox" id="p-acompanhar" name="prioridade" value="acompanhar"><label for="p-acompanhar">Acompanhamento em tempo real</label>
-        <input type="checkbox" id="p-metodo" name="prioridade" value="metodo"><label for="p-metodo">Metodologia positiva</label>
-        <input type="checkbox" id="p-preco" name="prioridade" value="preco"><label for="p-preco">Preço justo</label>
+      <div class="step-panel" id="step-4">
+        <div class="step-icon">🏡</div>
+        <h3 class="t-headline step-title">Um pouco sobre você</h3>
+        <p class="step-desc">Última etapa. Nenhum dado é obrigatório.</p>
+        <div class="field-row">
+          <div class="field-group">
+            <label>Seu nome <span>(opcional)</span></label>
+            <input class="field-input" type="text" placeholder="Como prefere ser chamado" id="f-nome-tutor">
+          </div>
+          <div class="field-group">
+            <label>Seu bairro</label>
+            <input class="field-input" type="text" placeholder="Ex: Lapa, Alto da Lapa, Vila Romana…" id="f-bairro">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Você mora em condomínio?</label>
+          <div class="pill-group">
+            <input type="radio" id="cond-sim" name="condominio" value="sim"><label for="cond-sim">Sim</label>
+            <input type="radio" id="cond-nao" name="condominio" value="nao"><label for="cond-nao">Não</label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Teria interesse em acompanhar o Dotô antes da abertura?</label>
+          <div class="pill-group">
+            <input type="checkbox" id="aw-lista" name="awareness" value="lista"><label for="aw-lista">Lista de espera</label>
+            <input type="checkbox" id="aw-wpp" name="awareness" value="whatsapp"><label for="aw-wpp">Novidades via WhatsApp</label>
+            <input type="checkbox" id="aw-nao" name="awareness" value="nao"><label for="aw-nao">Prefiro não receber</label>
+          </div>
+        </div>
+        <div class="signup-block" id="signup-block" style="display:none;">
+          <h4>Quero saber em primeira mão quando o Dotô abrir</h4>
+          <p>Deixa seu contato — você será avisado antes de qualquer divulgação pública.</p>
+          <div class="signup-row">
+            <input class="field-input" type="tel" placeholder="WhatsApp com DDD" id="f-wpp">
+            <button class="btn-signup" onclick="handleSignup()">Cadastrar</button>
+          </div>
+        </div>
+        <div class="form-nav">
+          <button class="btn-back" onclick="goStep(3)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</button>
+          <button class="btn-next submit" onclick="submitForm()">Enviar pesquisa ✦</button>
+        </div>
       </div>
-    </div>
-    <div class="field-group">
-      <label>Teria interesse em cuidado especializado para cães acima de 8 anos?</label>
-      <div class="pill-group">
-        <input type="radio" id="al-sim" name="ala-senior" value="sim"><label for="al-sim">Sim, seria muito importante</label>
-        <input type="radio" id="al-talvez" name="ala-senior" value="talvez"><label for="al-talvez">Talvez no futuro</label>
-        <input type="radio" id="al-nao" name="ala-senior" value="nao"><label for="al-nao">Não no momento</label>
-      </div>
-    </div>
-    <div class="field-group">
-      <label>Tem algo que você sempre quis num serviço desses e nunca encontrou? <span>(opcional)</span></label>
-      <textarea class="field-textarea" placeholder="Pode ser qualquer coisa — estrutura, horário, atendimento, comunicação…" id="f-queria"></textarea>
-    </div>
-    <div class="form-nav">
-      <button class="btn-back" onclick="goStep(2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</button>
-      <button class="btn-next" onclick="goStep(4)">Próximo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-    </div>
-  </div>
 
-  <div class="step-panel" id="step-4">
-    <div class="step-icon">🏡</div>
-    <h3 class="t-headline step-title">Um pouco sobre você</h3>
-    <p class="step-desc">Última etapa. Nenhum dado é obrigatório.</p>
-    <div class="field-row">
-      <div class="field-group">
-        <label>Seu nome <span>(opcional)</span></label>
-        <input class="field-input" type="text" placeholder="Como prefere ser chamado" id="f-nome-tutor">
+      <div class="form-success" id="form-success">
+        <div class="success-icon">🐾</div>
+        <h3>Obrigado por fazer parte.</h3>
+        <p>Suas respostas chegaram. Quando o Dotô abrir, você vai ser um dos primeiros a saber.</p>
       </div>
-      <div class="field-group">
-        <label>Seu bairro</label>
-        <input class="field-input" type="text" placeholder="Ex: Lapa, Alto da Lapa, Vila Romana…" id="f-bairro">
-      </div>
-    </div>
-    <div class="field-group">
-      <label>Você mora em condomínio?</label>
-      <div class="pill-group">
-        <input type="radio" id="cond-sim" name="condominio" value="sim"><label for="cond-sim">Sim</label>
-        <input type="radio" id="cond-nao" name="condominio" value="nao"><label for="cond-nao">Não</label>
-      </div>
-    </div>
-    <div class="field-group">
-      <label>Teria interesse em acompanhar o Dotô antes da abertura?</label>
-      <div class="pill-group">
-        <input type="checkbox" id="aw-lista" name="awareness" value="lista"><label for="aw-lista">Lista de espera</label>
-        <input type="checkbox" id="aw-wpp" name="awareness" value="whatsapp"><label for="aw-wpp">Novidades via WhatsApp</label>
-        <input type="checkbox" id="aw-nao" name="awareness" value="nao"><label for="aw-nao">Prefiro não receber</label>
-      </div>
-    </div>
-    <div class="signup-block" id="signup-block" style="display:none;">
-      <h4>Quero saber em primeira mão quando o Dotô abrir</h4>
-      <p>Deixa seu contato — você será avisado antes de qualquer divulgação pública.</p>
-      <div class="signup-row">
-        <input class="field-input" type="tel" placeholder="WhatsApp com DDD" id="f-wpp">
-        <button class="btn-signup" onclick="handleSignup()">Cadastrar</button>
-      </div>
-    </div>
-    <div class="form-nav">
-      <button class="btn-back" onclick="goStep(3)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</button>
-      <button class="btn-next submit" onclick="submitForm()">Enviar pesquisa ✦</button>
-    </div>
-  </div>
 
-  <div class="form-success" id="form-success">
-    <div class="success-icon">🐾</div>
-    <h3>Obrigado por fazer parte.</h3>
-    <p>Suas respostas chegaram. Quando o Dotô abrir, você vai ser um dos primeiros a saber.</p>
-  </div>
-
-</div>
-```
-
+    </div>
   </div>
 </section>
 
 <!-- DIVIDER -->
-
 <div class="section-divider" id="sobre">
   <div class="divider-line"></div>
   <div class="divider-text">Quer conhecer mais sobre o Dotô?</div>
@@ -541,40 +529,36 @@ max-width: 480px;
 </div>
 
 <!-- MANIFESTO -->
-
 <section class="manifesto-section">
   <div class="manifesto-inner">
     <span class="manifesto-label">O que acreditamos</span>
 
-```
-<div class="manifesto-text reveal">
-  O cão não sabe o que é ingratidão. Ele chega, fica e ama —
-  <em>sem contrato, sem condição, sem prazo.</em>
-</div>
+    <div class="manifesto-text reveal">
+      O cão não sabe o que é ingratidão. Ele chega, fica e ama —
+      <em>sem contrato, sem condição, sem prazo.</em>
+    </div>
 
-<div class="manifesto-text reveal reveal-delay-1" style="margin-top: 28px;">
-  Nós, humanos, recebemos tudo isso e raramente sabemos como devolver.
-  O Dotô nasceu de uma resposta simples para essa pergunta:
-  <strong>com ciência, afeto e presença real.</strong>
-</div>
+    <div class="manifesto-text reveal reveal-delay-1" style="margin-top: 28px;">
+      Nós, humanos, recebemos tudo isso e raramente sabemos como devolver.
+      O Dotô nasceu de uma resposta simples para essa pergunta:
+      <strong>com ciência, afeto e presença real.</strong>
+    </div>
 
-<div class="manifesto-text reveal reveal-delay-2" style="margin-top: 28px;">
-  Acreditamos que retribuir o amor recebido, cuidar de quem envelhece
-  e restaurar quem se esgota são gestos do mesmo valor.
-  Para cães, para pessoas,
-  <em>para a vida.</em>
-</div>
+    <div class="manifesto-text reveal reveal-delay-2" style="margin-top: 28px;">
+      Acreditamos que retribuir o amor recebido, cuidar de quem envelhece
+      e restaurar quem se esgota são gestos do mesmo valor.
+      Para cães, para pessoas,
+      <em>para a vida.</em>
+    </div>
 
-<div class="manifesto-closing reveal reveal-delay-3">
-  "Do primeiro latido ao último passeio, cada cão é tratado como único.<br>Porque é."
-</div>
-```
-
+    <div class="manifesto-closing reveal reveal-delay-3">
+      "Do primeiro latido ao último passeio, cada cão é tratado como único.<br>Porque é."
+    </div>
   </div>
 </section>
 
-<!-- OHANA -->
 
+<!-- OHANA -->
 <section class="ohana-section">
   <div class="container">
     <div class="ohana-inner">
@@ -587,20 +571,17 @@ max-width: 480px;
 <footer>
   <div class="container-wide">
     <div class="footer-simple">
-
-```
-  <div class="footer-info">
-    <div class="footer-slogan">Amor incondicional merece cuidado incondicional.</div>
-    <div class="footer-address">
-      Lapa · São Paulo, SP
+      
+      <div class="footer-info">
+        <div class="footer-slogan">Amor incondicional merece cuidado incondicional.</div>
+        <div class="footer-address">
+          Lapa · São Paulo, SP
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="footer-bottom">
-  <p>© 2026 Dotô — Escola Canina · Lapa, São Paulo</p>
-</div>
-```
-
+    <div class="footer-bottom">
+      <p>© 2026 Dotô — Escola Canina · Lapa, São Paulo</p>
+    </div>
   </div>
 </footer>
 
@@ -695,6 +676,8 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
+    
+
+  
